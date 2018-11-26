@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   namespace :api do 
     resources :books, except: [:new, :edit]
+    resources :users, only: [:show, :update, :create]
   end 
 
 end

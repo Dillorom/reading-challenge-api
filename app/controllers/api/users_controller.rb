@@ -20,7 +20,7 @@ class Api::UsersController < ApplicationController
     end 
 
     def update
-        if ! current_user?
+        if !current_user?
             render json: {message: "Invalid Request"}, status: 401
         else
             render json: @user, status: 200
