@@ -8,7 +8,7 @@ class BooksController < ApplicationController
 
     def create
         book = Book.create(book_params)
-        if book.save!
+        if book.save
             render json: book
         else
             render json: {message: book.errors }, status: 400
