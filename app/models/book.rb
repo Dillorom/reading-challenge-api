@@ -4,5 +4,5 @@ class Book < ApplicationRecord
     validates :img_url, presence: true
     validates :description, presence: true
     validates :title, uniqueness: true
-    validates :description, uniqueness: true
+    # validates :description, uniqueness: true
 end
