@@ -29,7 +29,7 @@ class BooksController < ApplicationController
 
     def destroy
         if @book.destroy
-            render status: 204
+            render json: @book
         else
             render json: {message: "Unable to remove the book "}, status: 400
         end
