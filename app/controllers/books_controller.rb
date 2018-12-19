@@ -21,7 +21,7 @@ class BooksController < ApplicationController
     end
 
     def update
-        binding.pry
+        #binding.pry
         if @book.update(book_params)
             render json: @book
         else
