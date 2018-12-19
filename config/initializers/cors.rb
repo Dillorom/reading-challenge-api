@@ -11,8 +11,8 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
     # once I add heroku, I need to update the above line to ['localhost:3000', 'reading-challenge.herokuapp.com or whaterer it is name']
 
     resource '*',
-      headers: :any, # maybe add this: ‘Access-Control-Allow-Origin’,
-      #Access-Control-Allow-Methods: GET, POST, PUT, PATCH, , DELETE, OPTIONS
+      headers: #Access-Control-Allow-Methods GET, POST, PATCH, DELETE, OPTIONS
+      #:any, # maybe add this: ‘Access-Control-Allow-Origin’,
       methods: [:get, :post, :put, :patch, :delete, :options, :head]
   end
 end
