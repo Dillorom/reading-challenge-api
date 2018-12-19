@@ -7,6 +7,7 @@ class BooksController < ApplicationController
     end
 
     def create
+        binding.pry
         book = Book.create(book_params)
         if book.save
             render json: book
@@ -20,6 +21,7 @@ class BooksController < ApplicationController
     end
 
     def update
+        binding.pry
         if @book.update(book_params)
             render json: @book
         else
